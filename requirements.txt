@@ -8,7 +8,6 @@ dj-database-url==0.2.1
 dot2tex==2.8.7
 ipython==0.12
 macholib==1.4.3
-matplotlib==1.1.0
 modulegraph==0.9.1
 networkx==1.6
 nose==1.1.2
