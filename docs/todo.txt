@@ -1,0 +1,13 @@
+1. G-mail pull e-mail
+
+2. Send e-mail to users to ask for classification
+
+3. Users could send back e-mail to classify or come to web site to classify
+
+4. Shows feed of contacts added and labeled in Redfly
+
+5. Just enter links to social media
+  Use rapportive or some social media tool to find a person's linkedin, fb, twitter
+
+6. Get feeds from the social media of that person
+

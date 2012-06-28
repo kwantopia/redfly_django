@@ -1,0 +1,24 @@
+{% extends "redfly/base_html5.html" %}
+
+{% block content %}
+
+  <h1>Redfly</h1>
+
+  Redfly provides collaborative people tracking for teams.
+
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+
+  You can see other contacts curated by other team members.
+
+
+  <form method="POST" action="{% url connect_gmail %}">
+    <input type="submit" value="Connect to G-mail"/>
+  </form>
+
+{% endblock content %}
+
+{% block additional_scripts %}
+{% endblock additional_scripts %}
+

@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'redfly.views.home', name='landing_page'),
+    url(r'^', include('main.urls')),
 )
