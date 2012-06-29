@@ -1,5 +1,6 @@
 *.py[co]
 venv
+settings_local.py
 
 # Packages
 *.egg
