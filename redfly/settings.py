@@ -16,8 +16,7 @@ MANAGERS = ADMINS
 
 import dj_database_url
 
-DATABASES = {'default': dj_database_url.config(default='sqlite:////Users/kwan/workspace/redfly/redfly.test.db')}
-#DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 """
 DATABASES = {
@@ -167,3 +166,10 @@ LOGGING = {
         },
     }
 }
+
+
+try:
+  from redfly.settings_local import *
+except:
+  print "Error importing settings local"
+  pass
