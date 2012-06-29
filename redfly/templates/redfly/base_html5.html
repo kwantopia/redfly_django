@@ -16,50 +16,117 @@
   <meta name="description" content="">
 
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/style.css"> 
+  <link rel="stylesheet" href="{{ STATIC_URL }}html5/css/style.css"> 
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!--<link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/variables.less">
+  <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/bootswatch.less">-->
+
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.css">
+
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/docs.css">
+
+
+  <link rel="shortcut icon" href="{{ STATIC_URL }}ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}html5/img/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}html5/img/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}html5/img/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ STATIC_URL }}html5/img/apple-touch-icon-57x57-precomposed.png">
 
   {% block additional_styles %}
   
   {% endblock %}
   
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
   <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="{{ MEDIA_URL }}html5/js/libs/modernizr-2.5.3.min.js"></script>
+  <script src="{{ STATIC_URL }}html5/js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          {% block navbar_menu %}
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Redfly</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+          {% endblock navbar_menu %}
+        </div>
+      </div>
+    </div>
+
+
   <header>
+    <div class="container">
+    {% block header %}
 
+    {% endblock header %}
+    </div>
   </header>
-  <div role="main" id="main-content">
-    {% block content %}
-    
-    {% endblock content %}
-  </div>
-  <footer>
 
+  <div role="main" id="main-content">
+      {% block content %}
+      
+      {% endblock content %}
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Redstar Ventures, LLC 2012</p>
+    </div>
   </footer>
 
 
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="{{ MEDIA_URL }}d3/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/jquery-1.7.2.min.js"><\/script>')</script>
 
   <!-- scripts concatenated and minified via build script -->
-  <script src="{{ MEDIA_URL }}html5/js/plugins.js"></script>
-  <script src="{{ MEDIA_URL }}html5/js/script.js"></script>
+  <script src="{{ STATIC_URL }}html5/js/plugins.js"></script>
+  <script src="{{ STATIC_URL }}html5/js/script.js"></script>
   <!-- end scripts -->
+
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-transition.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-alert.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-modal.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-dropdown.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-scrollspy.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tab.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tooltip.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-popover.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-button.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-collapse.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-carousel.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-typeahead.js"></script>
+  <script src="{{ STATIC_URL }}js/application.js"></script>
+  <script src="{{ STATIC_URL }}js/less.js"></script>
 
   {% block additional_scripts %}
   {% endblock additional_scripts %}

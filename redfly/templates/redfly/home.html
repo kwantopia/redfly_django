@@ -1,21 +1,107 @@
 {% extends "redfly/base_html5.html" %}
 
+{% block header %}
+  <h1>Connections made easy</h1>
+{% endblock header %}
+
+
 {% block content %}
 
-  <h1>Redfly</h1>
+<div class="container" data-spy="scroll" data-offset="50" data-target=".subnav">
 
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li>
+        <a href="#headline">Headline</a>
+      </li>
+      <li>
+        <a href="#features">Features</a>
+      </li>
+      <li>
+        <a href="#results">Results</a>
+      </li>
+      <li>
+        <a href="#action">Action</a>
+      </li>
+    </ul>
+  </div>
+
+  <section id="headline">
   Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  Redfly provides collaborative people tracking for teams.
+  </section>
 
+  <section id="features">
   Redfly watches your email.  It looks for new people that you email or respond to for the first time.
 
   Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
 
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  Redfly watches your email.  It looks for new people that you email or respond to for the first time.
+
+  Every few days, I'll send you a reminder to add notes and tags to the new contacts you've made this week.
+  </section>
+
+  <section id="results">
   You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  You can see other contacts curated by other team members.
+  </section>
 
+  <section id="action">
 
   <form method="POST" action="{% url connect_gmail %}">
-    <input type="submit" value="Connect to G-mail"/>
+    {% csrf_token %}
+    <input class="btn btn-primary" type="submit" value="Connect to G-mail"/>
   </form>
+  </section>
+
+</div>
 
 {% endblock content %}
 

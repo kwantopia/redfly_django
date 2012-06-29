@@ -21,6 +21,10 @@ def connect_gmail(request):
     Authenticate through Gmail and pull header information
   """
   data = {}
+  u = request.user
+
+  u.authenticate()
+  u.login()
   return render_to_response("main/connect_gmail.html", data, context_instance=RequestContext(request))
 
 @login_required
