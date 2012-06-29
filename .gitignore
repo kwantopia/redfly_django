@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *.py[co]
 venv
 
@@ -27,7 +26,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-=======
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -64,4 +62,3 @@ nbproject
 .CVS
 .idea
 node_modules
->>>>>>> 857b8fb8be81178d14f59c126c1381b09aff7c0f
