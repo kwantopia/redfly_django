@@ -1,5 +1,5 @@
 *.py[co]
-venv
+redfly-env
 settings_local.py
 
 # Packages
