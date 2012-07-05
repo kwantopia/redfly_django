@@ -1,0 +1,18 @@
+https://devcenter.heroku.com/articles/heroku-postgres-dev-plan
+
+heroku addons:add heroku-postgresql:dev --app winedora
+
+heroku pg:credentials HEROKU_POSTGRESQL_JADE --app winedora
+
+heroku pg:promote HEROKU_POSTGRESQL_JADE --app winedora
+
+heroku config:get DATABASE_URL
+
+# for purging packages installed on heroku
+http://stackoverflow.com/questions/8937905/how-to-pip-uninstall-with-virtualenv-on-heroku-cedar-stack
+
+
+# pushing
+git push heroku-staging staging:master
+git push heroku master
+
